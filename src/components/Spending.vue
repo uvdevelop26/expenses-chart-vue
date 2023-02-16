@@ -27,7 +27,7 @@ const hideData = ($event) => {
                 <div class="bar-data display-none"> ${{ spend.amount }}</div>
                 <div class="bar not-today-color" @mouseover="showData($event)" @mouseleave="hideData($event)"
                     :class="[spend.id === currentDay ? 'current-day-color' : '']"
-                    :style="{height: spend.amount + 10 +'px'}">
+                    :style="{ height: spend.amount + 10 + 'px' }">
                 </div>
                 <span class="day text-soft-brown">{{ spend.day }}</span>
             </div>
@@ -49,7 +49,7 @@ const hideData = ($event) => {
     margin: 0 auto;
     align-self: center;
     width: 100%;
-    max-width: 400px;
+    max-width: 390px;
     background: hsl(33, 100%, 98%);
     border-radius: 10px;
     padding: 15px;
@@ -109,8 +109,17 @@ const hideData = ($event) => {
 }
 
 .bar {
-    width: 30px;
+    width: 32px;
     border-radius: 4px;
+
+}
+
+@media(min-width: 900px) {
+    .bar {
+        width: 37px;
+        border-radius: 4px;
+
+    }
 }
 
 .not-today-color {
