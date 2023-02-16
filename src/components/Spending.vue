@@ -18,18 +18,6 @@ const hideData = ($event) => {
     sibling.classList.add('display-none');
 }
 
-
-
-
-//ver la barra que corresponde al día actual resaltado de un color
-//diferente
-//identificar la barra que corresponde al día actual
-//agregarle un color diferente
-
-
-
-
-
 </script>
 <template>
     <div class="card">
