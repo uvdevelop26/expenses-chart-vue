@@ -7,6 +7,7 @@ import { ref } from 'vue';
 const spending = ref(data);
 
 
+
 </script>
 
 <template>
@@ -17,8 +18,7 @@ const spending = ref(data);
     <main>
       <Spending :spending="spending" />
     </main>
-  </div>
-
+</div>
 </template>
 
 <style scoped>

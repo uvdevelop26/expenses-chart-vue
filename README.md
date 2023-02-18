@@ -33,11 +33,10 @@ Users should be able to:
 ![](./screen/desktop-final-preview.png)
 
 
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/uvdevelop26/expenses-chart-vue)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [](https://github.com/uvdevelop26/expenses-chart-vue)
+- Live Site URL: [](https://your-live-site-url.com)
 
 ## My process
 
@@ -56,7 +55,6 @@ Users should be able to:
 <div class="bar not-today-color" :class="[spend.id === currentDay ? 'current-day-color' : '']">
 </div>
 ```
-
 
 ### Continued development
 

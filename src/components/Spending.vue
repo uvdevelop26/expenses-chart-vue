@@ -27,7 +27,7 @@ const hideData = ($event) => {
                 <div class="bar-data display-none"> ${{ spend.amount }}</div>
                 <div class="bar not-today-color" @mouseover="showData($event)" @mouseleave="hideData($event)"
                     :class="[spend.id === currentDay ? 'current-day-color' : '']"
-                    :style="{ height: spend.amount + 10 + 'px' }">
+                    :style="{ height: spend.amount + 60 + 'px' }">
                 </div>
                 <span class="day text-soft-brown">{{ spend.day }}</span>
             </div>
