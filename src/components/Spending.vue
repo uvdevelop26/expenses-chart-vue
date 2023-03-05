@@ -7,25 +7,17 @@ const { spending } = defineProps(['spending']);
 const todayDate = new Date();
 let currentDay = ref(todayDate.getDay());
 
+const show = ref(null);
 
-const showData = ($event) => {
-    const sibling = $event.target.previousElementSibling;
-    sibling.classList.remove('display-none');
-}
-
-const hideData = ($event) => {
-    const sibling = $event.target.previousElementSibling;
-    sibling.classList.add('display-none');
-}
 
 </script>
 <template>
     <div class="card">
         <h1 class="card-tittle text-brown">Spending - Last 7 days</h1>
         <div class="bar-container">
-            <div class="bar-chart" v-for="spend in spending" :key="spend.day">
-                <div class="bar-data display-none"> ${{ spend.amount }}</div>
-                <div class="bar not-today-color" @mouseover="showData($event)" @mouseleave="hideData($event)"
+            <div class="bar-chart" v-for="(spend, spendIndex) in spending" :key="spend.id">
+                <div class="bar-data" v-if="show === spendIndex"> ${{ spend.amount }}</div>
+                <div class="bar not-today-color" @mouseover="show = spendIndex" @mouseleave="show = null"
                     :class="[spend.id === currentDay ? 'current-day-color' : '']"
                     :style="{ height: spend.amount + 60 + 'px' }">
                 </div>
